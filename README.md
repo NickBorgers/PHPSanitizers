@@ -9,5 +9,5 @@ An example would be:
     <?php
     require("Sanitizers.php"); 
 
-    echo SanitizeUsername($_GET['username'])
+    echo SanitizeUsername($_GET['username']);
     ?>
