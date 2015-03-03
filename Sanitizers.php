@@ -24,6 +24,10 @@
         return preg_replace('/[^A-Z0-9-]/s', "", filter_var($paypalID, FILTER_SANITIZE_EMAIL));
     }
 
+    function SanitizeText($text) {
+            return preg_replace('/[^a-zA-Z0-9]/s', "", filter_var($text, FILTER_SANITIZE_STRING,FILTER_FLAG_STRIP_LOW | FILTER_FLAG_STRIP_HIGH));
+    }
+    
     function SanitizeNonNumericText($text) {
         return preg_replace('/[^a-zA-Z]/s', "", filter_var($text, FILTER_SANITIZE_STRING,FILTER_FLAG_STRIP_LOW | FILTER_FLAG_STRIP_HIGH));
     }
